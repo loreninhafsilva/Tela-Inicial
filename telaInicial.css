@@ -8,220 +8,18 @@
     box-sizing: border-box;
 }
 
+html{
+  font-size: 16px;
+}
+
 body{
   background-color: #F4F4F4;
   overflow-x: hidden; 
 }
 
-/*Começo da NavBar*/
+/*tela inicial*/
 
-/*Começo animação*/
-.cta {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-
-.cta span {
-  padding-bottom: 7px;
-  font-size: 17px;
-  padding-right: 14px;
-}
-
-.cta svg {
-  transform: translateX(-8px);
-  transition: all 0.3s ease;
-}
-
-.cta:hover svg {
-  border: none;
-  background: none;
-  transform: translateX(0);
-}
-
-.cta:focus {
-  outline: none;
-}
-
-.cta:active svg {
-  border: none;
-  background: none;
-  transform: scale(0.9);
-}
-
-/*cadastro*/
-.cadastro {
-  position: relative;
-  color: #4E9E5A;
-  padding-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-
-.cadastro:after {
-  content: "";
-  position: absolute;
-  width: 86%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #004852;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .cadastro:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/*login*/
-.login {
-  position: relative;
-  color: #4E9E5A;
-  padding-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-
-.login:after {
-  content: "";
-  position: absolute;
-  width: 83%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #004852;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .login:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/*contato*/
-.contato {
-  position: relative;
-  color: #4E9E5A;
-  padding-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-
-.contato:after {
-  content: "";
-  position: absolute;
-  width: 83%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #004852;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .contato:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/*sobreNos*/
-.sobreNos {
-  position: relative;
-  color: #4E9E5A;
-  padding-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-
-.sobreNos:after {
-  content: "";
-  position: absolute;
-  width: 87%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #004852;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .sobreNos:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/*ideias*/
-.ideias {
-  position: relative;
-  color: #4E9E5A;
-  padding-bottom: 20px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-
-.ideias:after {
-  content: "";
-  position: absolute;
-  width: 79%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #004852;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.cta:hover .ideias:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/*Fim animação*/
-
-button{
-  background-color: #520000;
-}
-
-.nav-item{
-  color:#4E9E5A;
-  font-weight: bold;
-}
-
-.animacao:hover{
-  color: #004852;
-}
-
-.nav-link{
-  color: #4E9E5A;
-}
-
-.navbar{
-  background-color: #F4F4F4;
-}
-
-.navBar{
-  background-color: #F4F4F4;
-}
-
-.navbarAccessed{
-  color: #57cc99;
-}
-
-.navbarIcon{
-  height: 50px;
-}
-
-/*Fim da NavBar*/
-.container > .circulo {
+.container > .inicial {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -253,7 +51,127 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -10%;
+}
+
+.titulo{
+  position: absolute; 
+  left: 10%; 
+  width: 100%; 
+  z-index: 2;
+}
+
+.titulo > .principal{
+  font-size: 3vw;
+  font-weight: bold;
+  color: #F4F4F4;
+  line-height: 1;
+}
+
+.titulo > .subTitulo{
+  line-height: 1;
+  font-size: 1.5vw;
+  color: #F4F4F4;
+}
+
+button {
+  color: #FAFAFA;
+  padding: 0.5vw 1.5vw;
+  border: 2px solid #FAFAFA;
+  background: #004852;
+  box-shadow: .4vw .4vw #fafafa;
+  cursor: pointer;
+  margin: 35vw 0;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+/*fim tela inicial*/
+
+/*tela mapa*/
+.container > .mapa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.incorpMapa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10%;
 }
 
 
+.textoMapa > .principal2{
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.2;
+}
+
+.textoMapa > .subTitulo2{
+  line-height: 1.3;
+  font-weight: bold;
+  font-size: 1.4vw;
+  color: #000000;
+}
+
+.search-container{
+  width: 40vw;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1vw;
+  border-radius: 10px;
+  margin: 0;
+}
+
+input#search-bar{
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 1vw;
+  width: 70%;
+  height: 3em;
+  padding: 0 2em;
+  font-size: 1vw;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #000000;
+    transition: 0.35s ease;
+    color: #000000;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+  	 opacity: 0;
+     }    
+   }
+ }
+
+.search-icon{
+  position: relative;
+  float: right;
+  width: 5vw;
+  height: 5vw;
+  right: 28%;
+}
+
+@media (max-width: 500px) {
+  .search-icon{
+    
+  }
+}
 
