@@ -238,7 +238,7 @@ input#search-bar{
 
 
 #carouselExampleControls, #carouselExampleControlsVidro, #carouselExampleControlsPapel, #carouselExampleControlsMetal, #carouselExampleControlsOrganico, #carouselExampleControlsMadeira{
-  width: 65em;
+  width: 100vw;
 }
 
 /*Início dos Cards*/
@@ -263,40 +263,196 @@ a:link{
 
 .card a:hover {
   color: black;
-  text-decoration: none; /* Remove a linha embaixo do link quando o mouse passa por cima */
+  text-decoration: none; 
 }
 
 .card-img-top {
-  height: 150px; /* Defina a altura desejada para as imagens */
-  object-fit: cover; /* Isso garante que a imagem cubra todo o espaço designado, mantendo a proporção */
+  height: 150px; 
+  object-fit: cover;
 }
 
 .card {
-  width: 14rem; /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-  margin-bottom: 20px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
+  width: 14rem;
+  margin-bottom: 20px;
   box-shadow: 2px 2px 25px 1px rgba(0, 0, 0, 0.241);
 }
 
 .card-body {
-  padding: 7px; /* Reduza o preenchimento interno do corpo do card */
+  padding: 7px; 
+  padding-top: 10px;
   align-content: center;
 }
 
 .card-title {
-  font-size: 1.1rem; /* Reduza o tamanho do título do card */
+  font-size: 1.1rem; 
   text-align: center;
   color: #ffffff;
 }
 
 .card-text {
-  font-size: 0.9rem; /* Reduza o tamanho do texto do card */
+  font-size: 0.9rem; 
 }
 
 /*Fim dos Cards*/
 
 /*fim telas curiosidades*/
 
-@media (max-width: 500px) {
+/*tela materiais*/
+.materiais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+#tituloMateriais{
+  display: flex;
+  flex-direction: row;
+}
+
+#tituloMateriais > h3{
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.2;
+  font-family: 'Circe';
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-left: -1.5%;
+}
+
+.lixeiras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    padding-left: 1vw !important;
+}
+
+#linhaLixeiras{
+  width: 50vw !important;
+}
+
+#linhaLixeiras > a > .lixeiras{
+  height: 20vh;
+  width: 10vw;
+  padding: 0;
+}
+
+.descLixeiras{
+  text-align: center;
+  font-weight: bold;
+  margin-top: .75vw;
+  font-size: 1.3vw;
+}
+
+.lixeiras a{
+  text-decoration: none !important; 
+  color: #000000; 
+}
+.lixeiras a:visited{
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.lixeiras a:hover, .lixeiras a:active, .lixeiras a:focus {
+  text-decoration:none !important;
+  color: #000000;
+  outline: none; 
+}
+
+/*fim da tela materiais*/
+
+/*rodapé*/
+
+.equipe{
+  background-color: #3B5364;
+}
+
+#tituloEquipe{
+  color: #F4F4F4;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 20%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  text-transform: uppercase;
+}
+
+.descricao{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.sobre{
+  display: flex;
+  align-items: flex-start;
+}
+.contato{
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.search-container2{
+  width: 20vw;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1vw;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.search-icon2{
+  position: relative;
+  float: right;
+  width: 4vw;
+  height: 4vw;
+  right: 28%;
+  margin-top: 1%;
+}
+
+input#search-bar2{
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 1vw;
+  width: 70%;
+  height: 2.5em;
+  padding: 0 2em;
+  font-size: 1vw;
+  border: 1px solid #D0CFCE;
+  outline: none;
+  &:focus{
+    border: 1px solid #000000;
+    transition: 0.35s ease;
+    color: #000000;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease; 
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease; 
+  	 opacity: 0;
+     }    
+   }
+ }
+/*fim rodapé*/
+
+@media (max-width: 50px) {
   .crianca{
     background-color: #3A7D44;
   }
@@ -345,204 +501,198 @@ a:link{
 @media screen and (max-width: 988px){
 
     .cards {
-      display: flex; /* Torna o container flexível */
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
-       /* Distribui os itens uniformemente ao longo do contêiner, com espaço adicional entre eles */
+      display: flex; 
+      flex-wrap: wrap; 
     }
     
     .card {
-      width: 14rem; /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-      margin-bottom: 20px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
+      width: 14rem; 
+      margin-bottom: 20px; 
     }
 
     .card-body {
-      padding: 5px; /* Reduza o preenchimento interno do corpo do card */
+      padding: 5px; 
+      padding-bottom: 10px;
+      height: 5em;
     }
-    
     .card-img-top {
-      height: 100px; /* Reduza a altura da imagem */
-      object-fit: cover; /* Mantém a proporção e corta a imagem para preencher todo o espaço */
+      height: 100px; 
+      object-fit: cover;
     }
     
     .card-title {
-      font-size: 0.9rem; /* Reduza o tamanho do título do card */
+      font-size: 0.9rem;
     }
     
     .card-text {
-      font-size: 0.8rem; /* Reduza o tamanho do texto do card */
+      font-size: 0.8rem; 
     }
     #card1{
       display: none;
     }
     .cards-wrapper > .card {
-      height: 9.6em;
+      height: 13em;
+    }
+
+    .cards-wrapper > .card > .card-body{
+      height: 100%;
+    }
+    h3{
+      font-size: 3vw !important;
+    }
+
+    #tituloMateriais > img{
+      width: 4% !important;
+    }
+
+    #tituloCuri > img{
+      width: 7% !important;
+      margin-top: -2.5% !important;
+      margin-right: -1.5%;
+    }
+
+    #linhaLixeiras{
+      width: 70vw !important;
+    }
+
+    #linhaLixeiras{
+      width: 80vw !important;
+    }
+
+    .lixeiras > a > h6{
+      font-size: 2vw;
     }
 }
 
 @media screen and (max-width: 470px){
 
     .cards {
-      display: flex; /* Torna o container flexível */
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
+      display: flex;
+      flex-wrap: wrap; 
     }
     
     .card {
-      width: calc(50% - 10px); /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-      margin-bottom: 20px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
+      width: calc(50% - 10px); 
+      margin-bottom: 20px;
     }
 
     .cards-wrapper > .card > .card-body{
-      height: 0.8em;
+      height: 100%;
+      height: 5em;
     }
+
 }
 
 @media screen and (max-width: 568px){
   
     .cards {
-      display: flex; /* Torna o container flexível */
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
+      display: flex; 
+      flex-wrap: wrap;
     }
     
     .card {
-      width: 16rem; /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-      margin-bottom: 20px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
+      width: 10rem; 
+      margin-bottom: 20px; 
     }
 
     .card-body {
-      padding: 5px; /* Reduza o preenchimento interno do corpo do card */
+      padding: 5px;
     }
     
     .card-img-top {
-      height: 120px; /* Reduza a altura da imagem */
-      object-fit: cover; /* Mantém a proporção e corta a imagem para preencher todo o espaço */
+      height: 120px; 
+      object-fit: cover; 
     }
     
     .card-title {
-      font-size: 1rem; /* Reduza o tamanho do título do card */
+      font-size: .75rem; 
     }
-    
-    .card-text {
-      font-size: 0.9rem; /* Reduza o tamanho do texto do card */
-    }
+
     #card1, #card3{
       display: none;
     }
-    .botao{
-      margin-bottom: 4%;
-    }
-    #titulos > img{
-      margin-top: -5px;
-      }
-  #plastico, #papel, #vidro, #madeira, #organico, #metal{
-      font-size: 20px;
-    }
+
     .cards-wrapper > .card {
       height: 11em;
     }
 
+    .cards-wrapper > .card > .card-body{
+      height: 10em;
+    }
+
+    h3{
+      font-size: 5vw !important;
+    }
+
+    #linhaLixeiras{
+      width: 90vw !important;
+    }
+
+    .lixeiras > a > h6{
+      font-size: 3vw;
+    }
+
+    #tituloMateriais > img{
+      width: 7% !important;
+      margin-top: -5% !important;
+    }
 }
 
 @media screen and (max-width: 380px){
 
     .cards {
-      display: flex; /* Torna o container flexível */
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
+      display: flex;
+      flex-wrap: wrap;
     }
     
     .card {
-      width: 16rem; /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-      margin-bottom: 20px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
+      width: 50%; 
+      margin-bottom: 20px; 
     }
 
     .card-body {
-      padding: 6px; /* Reduza o preenchimento interno do corpo do card */
+      padding: 6px;
     }
     
     .card-img-top {
-      height: 110px; /* Reduza a altura da imagem */
-      object-fit: cover; /* Mantém a proporção e corta a imagem para preencher todo o espaço */
+      height: 100px; 
+      object-fit: cover;
     }
     
     .card-title {
-      font-size: 1rem; /* Reduza o tamanho do título do card */
-    }
-    
-    .card-text {
-      font-size: 0.9rem; /* Reduza o tamanho do texto do card */
+      font-size: 0.8rem;
     }
 
     #card1, #card3{
       display: none;
     }
 
-    .botao{
-      margin-bottom: 4%;
-    }
-
-    #titulos > img{
-      margin-top: -5px;
-      }
-  
-    #plastico, #papel, #vidro, #madeira, #organico, #metal{
-      font-size: 20px;
-    }
-    .cards-wrapper > .card > .card-body{
-      height: 0.8em;
-    }
-}
-
-/*Galaxy Fold*/
-@media screen and (max-width: 320px){
-
-    .cards {
-      display: flex; /* Torna o container flexível */
-      flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha quando não há espaço suficiente */
-    }
-    
-    .card {
-      width: 12rem; /* Define a largura de cada card para 50% do contêiner (menos uma pequena margem) */
-      margin-bottom: 30px; /* Adiciona margem na parte inferior de cada card para espaçamento entre eles */
-    }
-
-    .card-body {
-      padding: 5px; /* Reduza o preenchimento interno do corpo do card */
-    }
-    
-    .card-img-top {
-      height: 100px; /* Reduza a altura da imagem */
-      object-fit: cover; /* Mantém a proporção e corta a imagem para preencher todo o espaço */
-    }
-    
-    .card-title {
-      font-size: 0.9rem; /* Reduza o tamanho do título do card */
-    }
-    
-    .card-text {
-      font-size: 0.8rem; /* Reduza o tamanho do texto do card */
-    }
-
-    #card1, #card3{
-      display: none;
-    }
-
-    #botao{
-      margin-bottom: 2em;
-    }
-
-    #plastico, #papel, #vidro, #madeira, #organico, #metal{
-      font-size: 20px;
-    }
-
-    #titulos{
-      margin-top: 10px;
-    }
-
-    #titulos > img{
-    margin-top: -5px;
-    }
-    
     .cards-wrapper > .card {
-      height: 9.6em;
+      height: 12em;
+      width: 9em;
     }
 
+    .cards-wrapper > .card > .card-body{
+      height: 5em;
+    }
+
+    #tituloMateriais > img{
+      width: 5% !important;
+      margin-top: -6% !important;
+    }
+
+    #tituloCuri > img{
+      width: 9% !important;
+      margin-top: -2.5% !important;
+      margin-right: -1.5%;
+    }
+
+    #linhaLixeiras{
+      width: 90vw !important;
+    }
+
+    .lixeiras > a > h6{
+      font-size: 3vw;
+    }
 }
+
