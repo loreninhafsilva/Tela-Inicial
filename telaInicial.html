@@ -18,7 +18,7 @@
             <div class="titulo">
               <p class="principal" style="margin-bottom: 3%;">Reciclar e<br> reutilizar, não<br> deixe o<br> momento<br> passar!</p>
               <p class="subTitulo" style="margin-bottom: 3%;">Aqui as suas ideias são salvadoras</p>
-              <button style="border-radius: 10vw;"><p>Veja mais</p></button>
+              <button id="botão" style="border-radius: 10vw;"><p>Veja mais</p></button>
             </div>
           </div>
           <div class="col crianca" style="padding: 0;">
@@ -180,7 +180,7 @@
   </div>
   </div>
 
-  <div class="row" style="border: 0; margin: 0 auto; padding: 0; height: 15vh;"></div>
+  <div class="row separador" style="border: 0; margin: 0 auto; padding: 0; height: 10vw;"></div>
 
   <footer>
     <div class="container-fluid equipe" style="margin: 0; padding: 0; border: 0; flex-wrap: wrap; justify-content: flex-start; flex-direction: row; display: flex;">
@@ -190,95 +190,80 @@
         </div>
       </div>
       <div class="row sobre" style="border: 0; width: 50vw; margin: 0; padding: 0;">
-        <div class="col descricao" style="padding: 0;">
-          <img src="imagens/lixeiraMetal.png" alt="" style="width: 5vw;">
-          <ul>
-            <li>
-              Lorena Silva
-            </li>
-            <li>
-              dev front-ending
-            </li>
-            <li>
-              lorena.dev@gmail.com
-            </li>
-            <li>
-              <img src="imagens/divisa-direita.png" alt="">
-              <img src="imagens/divisa-esquerda.png" alt="">
-            </li>
-          </ul>
+        <div class="col descricao" style="padding: 0; display: flex;
+        justify-content: center;
+        align-items: center;">
+            <img src="imagens/lorena.png" alt="" style="width: 5vw; border-radius: 50%;">
+            <ul class="lista">
+                <li class="nome">Lorena Silva</li>
+                <li class="funcao">dev front-end</li>
+                <li>lorenasilva.dev@gmail.com</li>
+                <li>
+                    <a href=""><img src="imagens/instagram.png" style="width: 1.4vw;"  alt=""></a>
+                    <a href=""><img src="imagens/github.png" style="width: 1.4vw;"  alt=""></a>
+                </li>
+            </ul>
         </div>
-        <div class="col descricao" style="padding: 0;">
-          <img src="imagens/lixeiraMetal.png" alt="" style="width: 5vw;">
-          <ul>
-            <li>
-             Enzo Pazian
-            </li>
-            <li>
-              DEV BACK-ENDING
-            </li>
-            <li>
-              enzopazian1402@gmail.com
-            </li>
-            <li>
-              <img src="imagens/divisa-direita.png" alt="">
-              <img src="imagens/divisa-esquerda.png" alt="">
-            </li>
-          </ul>
+        <div class="col descricao" style="padding: 0; display: flex;
+        justify-content: center;
+        align-items: center;">
+            <img src="imagens/enzo.png" alt="" style="width: 5vw; border-radius: 50%;">
+            <ul class="lista">
+                <li class="nome">Enzo Pazian</li>
+                <li class="funcao">dev back-end</li>
+                <li>enzopazian1402@gmail.com</li>
+                <li>
+                  <a href=""><img src="imagens/instagram.png" style="width: 1.4vw;"  alt=""></a>
+                    <a href=""><img src="imagens/github.png" style="width: 1.4vw;"  alt=""></a>
+                </li>
+            </ul>
         </div>
-      </div>
-      <div class="row sobre" style="border: 0; width: 50vw; margin: 0; padding: 0;">
-        <div class="col descricao" style="padding: 0;">
-          <h6>FIQUE POR DENTRO<br> DAS NOVIDADES</h6>
+        <div class="row" style="border: 0; width: 50vw; margin: 0; padding: 0;">
+          <div class="col descricao" style="padding: 0; display: flex;
+          justify-content: center;
+          align-items: center;">
+              <img src="imagens/vitor.jpg" alt="" style="width: 5vw; border-radius: 50%;">
+              <ul class="lista">
+                  <li class="nome">Vitor Nascimento</li>
+                  <li class="funcao">dev back-end</li>
+                  <li id="emailVitor">vitorhsnascimento.dev@gmail.com</li>
+                  <li>
+                    <a href=""><img src="imagens/instagram.png" style="width: 1.4vw;"  alt=""></a>
+                      <a href=""><img src="imagens/github.png" style="width: 1.4vw;"  alt=""></a>
+                  </li>
+              </ul>
+          </div>
+          <div class="col descricao" style="padding: 0; display: flex;
+          justify-content: center;
+          align-items: center;">
+              <img src="imagens/beatriz.png" alt="" style="width: 5vw; border-radius: 50%;">
+              <ul class="lista">
+                  <li class="nome">Beatriz Cardia</li>
+                  <li class="funcao">dev designer</li>
+                  <li>beatrizcardia53@gmail.com</li>
+                  <li>
+                    <a href=""><img src="imagens/instagram.png" style="width: 1.4vw;"  alt=""></a>
+                      <a href=""><img src="imagens/github.png" style="width: 1.4vw;" alt=""></a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+      <div class="row sobre2" style="border: 0; width: 50vw; margin: 0; padding: 0; border-left: 2px dashed black;">
+        <div class="col descricao2" id="textRodape" style="padding: 0;">
+          <h6>FIQUE POR DENTRO DAS NOVIDADES</h6>
           <h6>DESEJA RECEBER NOTICIAS E ATUALIZAÇÕES FUTURAS DIRETAMENTE NA SUA CAIXA DE ENTRADA?</h6>
-          <form class="search-container2">
-            <input type="text" id="search-bar2" placeholder="DIGITE SEU EMAIL">
-            <a href="#"><img class="search-icon2" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+          <form action=" " method="post">
+            <input type="search" id="busca" name="q" placeholder="Digite seu email aqui">
+            <button id="botaoEmail" type="submit">&#128269;</button>
           </form>
-          <h6>FALE CONOSCO:<br><br></h6>
-          <h6>ecomomentcotil@gmail.com</h6>
+          <div style="display: flex; align-items: center; flex-direction: column;">
+            <h6>FALE CONOSCO:</h6>
+            <h6>ecomomentcotil@gmail.com</h6>
+          </div>
         </div>
-        <div class="col descricao" style="padding: 0;">
-          <img src="imagens/rodape.png" alt="" style="width: 15vw;">
-        </div>
-      </div>
-      <div class="row contato" style="border: 0; width: 50vw; margin: 0; padding: 0;">
-        <div class="col descricao" style="padding: 0;">
-          <img src="imagens/lixeiraMetal.png" alt="" style="width: 5vw;">
-          <ul>
-            <li>
-              VITOR NASCIMENTO
-
-            </li>
-            <li>
-              dev back-ending
-            </li>
-            <li>
-              vitorhsnascimento.dev@gmail.com
-            </li>
-            <li>
-              <img src="imagens/divisa-direita.png" alt="">
-              <img src="imagens/divisa-esquerda.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <div class="col descricao" style="padding: 0;">
-          <img src="imagens/lixeiraMetal.png" alt="" style="width: 5vw;">
-          <ul>
-            <li>
-              Beatriz Cardia
-            </li>
-            <li>
-              dev designer
-            </li>
-            <li>
-              beatrizcardia53@gmail.com
-            </li>
-            <li>
-              <img src="imagens/divisa-direita.png" alt="">
-              <img src="imagens/divisa-esquerda.png" alt="">
-            </li>
-          </ul>
+        <div class="col descricao2" style="padding: 0;">
+          <img src="imagens/rodape.png" alt="" style="width: 70%;">
         </div>
       </div>
     </div>

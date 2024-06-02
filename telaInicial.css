@@ -86,24 +86,33 @@ main{
   color: #F4F4F4;
 }
 
-button {
+#botão {
   color: #FAFAFA;
   padding: 0.5vw 1.5vw;
   border: 2px solid #FAFAFA;
   background: #004852;
   box-shadow: .4vw .4vw #fafafa;
   cursor: pointer;
-  margin: 35vw 0;
 }
-button > p{
+#botão > p{
   text-transform: uppercase;
   font-size: 1.2vw;
   margin: 0;
 }
 
-button:active {
+#botão:active {
   box-shadow: none;
   transform: translate(3px, 3px);
+}
+
+#busca{
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 15vw;
+}
+
+#botaoEmail{
+  padding: 5px;
 }
 
 /*fim tela inicial*/
@@ -372,48 +381,98 @@ a:link{
   background-color: #3B5364;
 }
 
-#tituloEquipe{
+/* Estilo da borda esquerda tracejada */
+.sobre {
+  border-left: 2px dashed black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+}
+
+.sobre {
+  border-left: 2px dashed black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: 0;
+  padding: 0;
+}
+
+.col {
+  flex: 1 1 50%; /* Cada coluna ocupa 50% da largura do contêiner */
+  padding: 0;
+  box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.descricao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #F4F4F4;
+  flex-direction: row;
+}
+
+.descricao2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #F4F4F4;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 1vw;
+}
+
+.nome{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.funcao{
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+/* Outros estilos existentes */
+#tituloEquipe {
   color: #F4F4F4;
   font-weight: 900;
   display: flex;
   align-items: flex-start;
   margin-left: 20%;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 2%;
   text-transform: uppercase;
 }
 
-.descricao{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  margin: 0;
-  padding: 0;
-}
-
-.sobre{
-  display: flex;
-  align-items: flex-start;
-}
-.contato{
+.contato {
   display: flex;
   align-items: flex-end;
   margin: 0;
 }
 
-.search-container2{
-  width: 20vw;
+#textRodape {
+  text-align: center;
+}
+
+.search-container2 {
+  width: 27vw;
   display: block;
   margin: 0 auto;
   margin-top: 1vw;
   border-radius: 10px;
-  margin: 0;
 }
 
-.search-icon2{
+.search-icon2 {
   position: relative;
   float: right;
   width: 4vw;
@@ -422,7 +481,7 @@ a:link{
   margin-top: 1%;
 }
 
-input#search-bar2{
+input#search-bar2 {
   border-radius: 50px;
   margin: 0 auto;
   margin-top: 1vw;
@@ -432,33 +491,38 @@ input#search-bar2{
   font-size: 1vw;
   border: 1px solid #D0CFCE;
   outline: none;
-  &:focus{
-    border: 1px solid #000000;
-    transition: 0.35s ease;
-    color: #000000;
-    &::-webkit-input-placeholder{
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
-    &::-moz-placeholder {
-      transition: opacity 0.45s ease; 
-  	  opacity: 0;
-     }
-    &:-ms-placeholder {
-     transition: opacity 0.45s ease; 
-  	 opacity: 0;
-     }    
-   }
- }
+}
+
+input#search-bar2:focus {
+  border: 1px solid #000000;
+  transition: 0.35s ease;
+  color: #000000;
+}
+
+input#search-bar2::placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+input#search-bar2:focus::placeholder {
+  opacity: 0;
+}
+
+#emailVitor{
+  font-size: .8vw;
+}
+
 /*fim rodapé*/
 
-@media (max-width: 50px) {
+@media (max-width: 500px) {
   .crianca{
     background-color: #3A7D44;
   }
+  
   .imagemCirculo{
     display: none;
   }
+  
   .circulo{
     height: 40vw;
     background-color: #3A7D44;
@@ -483,18 +547,31 @@ input#search-bar2{
     font-size: 2vw;
   }
 
-  button {
+  #botão {
     color: #FAFAFA;
     padding: 0.5vw 1.5vw;
     margin: 35vw 0;
   }
 
-  button > p{
+  #botão > p{
     font-size: 1.5vw;
   }
 
   .ondaVerde{
     display: block;
+  }
+
+  #tituloEquipe{
+    font-size: 1vw !important;
+    margin-left: 10%;
+  }
+
+  #tituloEquipe > h5{
+    font-size: 3vw !important;
+  }
+
+  .separador{
+    height: 10vw !important;
   }
 }
 
@@ -562,6 +639,19 @@ input#search-bar2{
     .lixeiras > a > h6{
       font-size: 2vw;
     }
+
+    .descricao2 > h6,.descricao2 > div >h6 {
+      font-size: 1.5vw !important;
+    }
+
+    .descricao {
+      font-size: 2vw !important;
+    }
+
+    .descricao > ul > li > a >img {
+      height: 5vw;
+    }
+
 }
 
 @media screen and (max-width: 470px){
@@ -579,6 +669,27 @@ input#search-bar2{
     .cards-wrapper > .card > .card-body{
       height: 100%;
       height: 5em;
+    }
+
+    .descricao {
+      font-size: 2vw !important;
+    }
+
+    .descricao > ul > li > a >img {
+      height: 5vw;
+    }
+
+    #tituloEquipe{
+      font-size: 1vw !important;
+      margin-left: 10%;
+    }
+
+    #tituloEquipe > h5{
+      font-size: 3vw !important;
+    }
+
+    .separador{
+      height: 10vw !important;
     }
 
 }
@@ -693,6 +804,27 @@ input#search-bar2{
 
     .lixeiras > a > h6{
       font-size: 3vw;
+    }
+
+    .descricao {
+      font-size: 2vw !important;
+    }
+
+    .descricao > ul > li > a >img {
+      height: 5vw;
+    }
+
+    #tituloEquipe{
+      font-size: 1vw !important;
+      margin-left: 10%;
+    }
+
+    #tituloEquipe > h5{
+      font-size: 3vw !important;
+    }
+
+    .separador{
+      height: 10vw !important;
     }
 }
 
