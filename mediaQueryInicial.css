@@ -34,7 +34,6 @@
     #botão {
       color: #FAFAFA;
       padding: 0.5vw 1.5vw;
-      margin: 35vw 0;
     }
   
     #botão > p{
@@ -56,6 +55,19 @@
   
     .separador{
       height: 10vw !important;
+    }
+
+    .formEmail{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .formEmail > form{
+      width: 75%;
+    }
+    .pt-2{
+      font-size: 0.8em !important;
     }
   }
   
@@ -143,6 +155,12 @@
       .icon{
         width: 10px;
         height: 10px;
+      }
+      #rodapeImagem{
+        width: 20%;
+      }
+      #disponivel{
+        border:none;
       }
   }
   
@@ -239,6 +257,9 @@
         width: 7% !important;
         margin-top: -5% !important;
       }
+      #disponivel{
+        border:none;
+      }
   }
   
   @media screen and (max-width: 380px){
@@ -318,5 +339,24 @@
       .separador{
         height: 10vw !important;
       }
+      #disponivel{
+        border:none;
+      }
+      #rodapeImagem{
+        width: 20%;
+      }
   }
   
+  @media screen and (max-width: 768px) {
+    .devs > ul > li{
+        font-size: 0.8em;
+    }
+    #rodapeImagem{
+      width: 30%;
+    }
+
+    #disponivel{
+      border:none;
+    }
+
+}
